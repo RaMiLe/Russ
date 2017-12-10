@@ -36,12 +36,12 @@ name="email" id="email"/></br>
 name="submit" value="Submit" />
 </form>
 <?php
-// DB connection info
+
 $host = "localhost\sqlexpress";
 $user = "user name";
 $pwd = "password";
 $db = "registration";
-// Connect to database.
+
 try {
     $conn = new PDO
 ( "sqlsrv:Server= $host ; Database = $db ", $user, $pwd);
