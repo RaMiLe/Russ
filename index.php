@@ -39,6 +39,15 @@ $host = "localhost\sqlexpress";
 $user = "user name";
 $pwd = "password";
 $db = "registration";
+
+</form>
+<?php
+
+// DB connection info
+$host = "localhost\sqlexpress";
+$user = "user name";
+$pwd = "password";
+$db = "registration";
 // Connect to database.
 try {
     $conn = new PDO
@@ -49,10 +58,6 @@ try {
 catch(Exception $e){
     die(var_dump($e));
 }
-</form>
-<?php
-
-
 ?>
 </body>
 </html>
