@@ -34,17 +34,6 @@ name="name" id="name"/></br>
 name="email" id="email"/></br>
       <input type="submit" 
 name="submit" value="Submit" />
-    // DB connection info
-$host = "localhost\sqlexpress";
-$user = "user name";
-$pwd = "password";
-$db = "registration";
-    // DB connection info
-$host = "localhost\sqlexpress";
-$user = "user name";
-$pwd = "password";
-$db = "registration";
-
 </form>
 <?php
 
