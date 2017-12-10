@@ -39,11 +39,7 @@ $host = "localhost\sqlexpress";
 $user = "user name";
 $pwd = "password";
 $db = "registration";
-
-</form>
-<?php
-
-// DB connection info
+    // DB connection info
 $host = "localhost\sqlexpress";
 $user = "user name";
 $pwd = "password";
@@ -58,6 +54,11 @@ try {
 catch(Exception $e){
     die(var_dump($e));
 }
+
+</form>
+<?php
+
+
 ?>
 </body>
 </html>
