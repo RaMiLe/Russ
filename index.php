@@ -56,8 +56,8 @@ $password = $_POST['password'];
 $Country = $_POST['Country'];
 // Insert data 
 $sql_insert = 
-"INSERT INTO registration_tbl1 (name, email, date, password, vopros, otvet) 
-VALUES (?,?,?,?,?,?)"; 
+"INSERT INTO registration_tbl1 (name, email) 
+VALUES (?,?)"; 
 $stmt = $conn->prepare($sql_insert); 
 $stmt->bindValue(1, $name); 
 $stmt->bindValue(2, $email); 
@@ -86,7 +86,7 @@ foreach($registrants as $registrant) {
 echo "<tr><td>".$registrant['name']."</td>"; 
 echo "<td>".$registrant['email']."</td>";
 echo "<td>".$registrant['password']."</td>";
-echo "<td>".$registrant['Country']."</td>";
+;
 } 
 echo "</table>"; 
 } else { 
