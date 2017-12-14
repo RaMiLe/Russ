@@ -23,7 +23,7 @@ border: 0 none; }
 </head> 
 <body> 
 <h1>Регистрация</h1> 
-<p>Введите свое имя, адрес электронной почты, пароль, контрольный вопрос, ответ на него и нажмите кнопку <strong> Зарегестрироваться </strong>.</p> 
+<p>Введите свое имя, адрес электронной почты, пароль,страны на него и нажмите кнопку <strong> Зарегестрироваться </strong>.</p> 
 <form method="post" action="index.php" 
 enctype="multipart/form-data" > 
 Имя <input type="text" 
@@ -52,8 +52,7 @@ $name = $_POST['name'];
 $email = $_POST['email']; 
 $date = date("Y-m-d"); 
 $password = $_POST['password'];
-$vopros = $_POST['vopros'];
-$otvet = $_POST['otvet'];
+$Country = $_POST['Country'];
 // Insert data 
 $sql_insert = 
 "INSERT INTO registration_tbl1 (name, email, date, password, vopros, otvet) 
@@ -81,15 +80,12 @@ echo "<table>";
 echo "<tr><th>Name</th>"; 
 echo "<th>Email</th>";
 echo "<th>Password</th>";
-echo "<th>Country</th>";
 echo "<th>Date</th></tr>"; 
 foreach($registrants as $registrant) { 
 echo "<tr><td>".$registrant['name']."</td>"; 
 echo "<td>".$registrant['email']."</td>";
 echo "<td>".$registrant['password']."</td>";
-echo "<td>".$registrant['vopros']."</td>";
-echo "<td>".$registrant['otvet']."</td>";
-echo "<td>".$registrant['date']."</td></tr>"; 
+echo "<td>".$registrant['Country']."</td>";
 } 
 echo "</table>"; 
 } else { 
