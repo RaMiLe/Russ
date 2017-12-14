@@ -40,6 +40,7 @@ name="otvet" id="otvet"/></br>
 name="submit" value="Зарегестироваться" /> 
 <?php 
 try { $conn = new PDO("sqlsrv:server = tcp:rom.database.windows.net,1433; Database = Ram12", "ramil1997", "Rosbank1997");
+    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 } 
 catch (PDOException $e) { 
 print("Error connecting to SQL Server."); 
