@@ -2,7 +2,7 @@
 try {
 $conn = new PDO("sqlsrv:server = tcp:ramil.database.windows.net,1433; Database = Tat", "ramil", "Rosbank1997");
 $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-$sql = "CREATE TABLE registration_too(
+$sql = "CREATE TABLE registration_on(
 id INT NOT NULL IDENTITY(1,1)
 PRIMARY KEY(id),
 name VARCHAR(30),
