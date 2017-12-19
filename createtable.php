@@ -13,7 +13,7 @@ try {
     date DATE)";
     $conn->query($sql);
 
-echo "Все тип-топ!"
+echo "Все тип-топ!";
 }
 catch (PDOException $e) {
     print("Error connecting to SQL Server.");
