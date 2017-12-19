@@ -8,7 +8,6 @@ PRIMARY KEY(id),
 name VARCHAR(30),
 email VARCHAR(30),
 country VARCHAR(30),
-country VARCHAR(30)
 date DATE)";
 $conn->query($sql);
 
@@ -20,12 +19,12 @@ die(print_r($e));
 }
 $conn = new PDO("sqlsrv:server = tcp:ramil.database.windows.net,1433; Database = Tat", "ramil", "Rosbank1997");
 $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-$sql = "CREATE TABLE city(
+$sql = "CREATE TABLE country(
 id_city INT NOT NULL IDENTITY(1,1)
 PRIMARY KEY(id),
 country_name VARCHAR(30)";
 $conn->query($sql);
-$sql = "INSERT INTO city (id_city, city_name) VALUES
+$sql = "INSERT INTO city (id_country, country_name) VALUES
 (1,"Moskow"),
 (2,"St.Petersburg"),
 (3,"Novosibirsk"),
