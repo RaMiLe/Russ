@@ -39,8 +39,8 @@ $username = "ramil";
 $password = "Rosbank1997";
 
 try {
-$conn = new PDO($dsn, $username, $password);
-$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    $conn = new PDO("sqlsrv:server = tcp:ramil.database.windows.net,1433; Database = Tat", "ramil", "Rosbank1997");
+    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 if(isset($_POST["clear"])) {
 $sql1 = "DELETE FROM registration_on";
 $conn->query($sql1);
