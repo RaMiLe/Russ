@@ -10,6 +10,7 @@ try {
     email VARCHAR(30),
     date DATE)";
     $conn->query($sql);
+   echo "<h3>Таблица города создана!</h3>";
 }
 catch (PDOException $e) {
     print("Error connecting to SQL Server.");
