@@ -32,7 +32,7 @@ Name <input type="text"
 name="name" id="name"/></br>
 Email <input type="text"
 name="email" id="email"/></br>
-    Email <input type="text"
+   Country <input type="text"
 name="country" id="country"/></br>
 
 <input type="submit"
