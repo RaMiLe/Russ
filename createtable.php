@@ -11,7 +11,7 @@ city VARCHAR(30),
 date DATE)";
 $conn->query($sql);
 
-echo "<h3>Таблица создана!</h3>";
+echo "<h3>Тики-таки!</h3>";
 }
 catch (PDOException $e) {
 print("Error connecting to SQL Server.");
