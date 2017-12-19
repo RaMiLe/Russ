@@ -1,37 +1,41 @@
-<!DOCTYPE html>
 <html>
 <head>
-<meta charset="utf-8">
-<title>Регистрационная форма</title>
-<link rel ="stylesheet" href ="/style.css">
-<link rel ="stylesheet" href ="/form.css">
+<Title>Registration Form</Title>
+<style type="text/css">
+body { background-color:
+#fff; border-top: solid 10px #000;
+color: #333; font-size: .85em;
+margin: 20; padding: 20;
+font-family: "Segoe UI",
+Verdana, Helvetica, Sans-Serif;
+}
+h1, h2, h3,{ color: #000;
+margin-bottom: 0; padding-bottom: 0; }
+h1 { font-size: 2em; }
+h2 { font-size: 1.75em; }
+h3 { font-size: 1.2em; }
+table { margin-top: 0.75em; }
+th { font-size: 1.2em;
+text-align: left; border: none; padding-left: 0; }
+td { padding: 0.25em 2em 0.25em 0em;
+border: 0 none; }
+</style>
 </head>
 <body>
-<h1>Зарегистрироваться здесь!</h1>
-<p>Введите свое имя и адрес электронной почты и нажмите кнопку <strong>Отправить</strong> для регистрации.</p>
-<form action="index.php" method="post">
-<div>
-<input type ="text" name ="name" id ="name" placeholder ="Введите ваше имя">
-<input type ="text" name ="email" id ="email" placeholder ="Ваш еmail..">
-<input type ="text" name ="age" id ="age" placeholder ="Ваш возраст..">
-<input type ="text" name ="country" id ="country" placeholder ="Страна">
-<input type ="date" name ="birthday" id ="birthday" placeholder ="Дата рождения">
-<div>
-<input type ="submit" name ="submit" class ="btn" value ="Отправить">
-<input type ="submit" name ="clear" class ="btn" id = "clr" value ="Очистить"></pre>
-</div>
-</div>
-<div>
-<select name ="gender" class ="gen">
-<option value ="">All</option>
-<option value ="Man" <?php if($gender == 'Man'){echo 'selected';}?»Man</option>
-<option value ="Woman" <?php if($gender == 'Woman'){echo 'selected';}?»Woman</option>
-</select>
-<input type="submit" name="filter" class="btn" value="Фильтр">
-</div>
+<h1>Register here!</h1>
+<p>Fill in your name and
+email address, then click <strong>Submit</strong>
+to register.</p>
+<form method="post" action="index.php"
+enctype="multipart/form-data" >
+Name <input type="text"
+name="name" id="name"/></br>
+Email <input type="text"
+name="email" id="email"/></br>
+
+<input type="submit"
+name="submit" value="Submit" />
 </form>
-</body>
-</html>
 
 <?php
 try {
