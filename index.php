@@ -49,6 +49,7 @@ die(print_r($e));
 if(!empty($_POST)) {
 try {
 $name = $_POST['name'];
+  $name = $_POST['name'];
 $email = $_POST['email'];
 $date = date("Y-m-d");
 
