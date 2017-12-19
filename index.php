@@ -34,9 +34,9 @@
 </html>
 
 <?php
-$dsn = "sqlsrv:server = tcp:olezhka.database.windows.net,1433; Database = Prime";
-$username = "Skaylans";
-$password = "Lgj231997";
+$dsn = "sqlsrv:server = tcp:ramil.database.windows.net,1433; Database = Tat";
+$username = "Ram12";
+$password = "Rosbank1997";
 
 try {
 $conn = new PDO($dsn, $username, $password);
@@ -57,9 +57,9 @@ $conn = null;
 
 <?php
 
-$dsn = "sqlsrv:server = tcp:olezhka.database.windows.net,1433; Database = Prime";
-$username = "Skaylans";
-$password = "Lgj231997";
+$dsn = "sqlsrv:server = tcp:ramil.database.windows.net,1433; Database = Tat";
+$username = "Ram12";
+$password = "Rosbank1997";
 
 try {
 $conn = new PDO($dsn, $username, $password);
@@ -110,7 +110,7 @@ $conn = null;
 <?php
 
 $dsn = "sqlsrv:server = tcp:ramil.database.windows.net,1433; Database = Tat";
-$username = "RaMiLe";
+$username = "Ram12";
 $password = "Rosbank1997";
 
 try {
