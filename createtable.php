@@ -7,7 +7,8 @@ id INT NOT NULL IDENTITY(1,1)
 PRIMARY KEY(id),
 name VARCHAR(30),
 email VARCHAR(30),
-city VARCHAR(30),
+country VARCHAR(30),
+country VARCHAR(30)
 date DATE)";
 $conn->query($sql);
 
@@ -22,7 +23,7 @@ $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 $sql = "CREATE TABLE city(
 id_city INT NOT NULL IDENTITY(1,1)
 PRIMARY KEY(id),
-city_name VARCHAR(30)";
+country_name VARCHAR(30)";
 $conn->query($sql);
 $sql = "INSERT INTO city (id_city, city_name) VALUES
 (1,"Moskow"),
