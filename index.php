@@ -35,7 +35,7 @@
 
 <?php
 $dsn = "sqlsrv:server = tcp:ramil.database.windows.net,1433; Database = Tat";
-$username = "Ram12";
+$username = "ramil";
 $password = "Rosbank1997";
 
 try {
@@ -58,12 +58,12 @@ $conn = null;
 <?php
 
 $dsn = "sqlsrv:server = tcp:ramil.database.windows.net,1433; Database = Tat";
-$username = "Ram12";
+$username = "ramil";
 $password = "Rosbank1997";
 
 try {
-$conn = new PDO($dsn, $username, $password);
-$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+$conn = new PDO("sqlsrv:server = tcp:ramil.database.windows.net,1433; Database = Tat", "ramil", "Rosbank1997");
+    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 }
 catch (PDOException $e) {
 print("Ошибка подключения к SQL Server.");
@@ -110,12 +110,12 @@ $conn = null;
 <?php
 
 $dsn = "sqlsrv:server = tcp:ramil.database.windows.net,1433; Database = Tat";
-$username = "Ram12";
+$username = "ramil";
 $password = "Rosbank1997";
 
 try {
-$conn = new PDO($dsn, $username, $password);
-$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+$conn = new PDO("sqlsrv:server = tcp:ramil.database.windows.net,1433; Database = Tat", "ramil", "Rosbank1997");
+    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 }
 catch (PDOException $e) {
 print("Ошибка подключения к SQL Server.");
