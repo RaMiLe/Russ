@@ -30,6 +30,8 @@ to register.</p>
 enctype="multipart/form-data" >
 Name <input type="text"
 name="name" id="name"/></br>
+  Name <input type="text"
+name="name" id="name"/></br>
 Email <input type="text"
 name="email" id="email"/></br>
 
