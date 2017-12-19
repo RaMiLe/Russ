@@ -33,12 +33,10 @@
 </html>
 
 <?php
-$dsn = "sqlsrv:server = sqlsrv:server = tcp:ramil.database.windows.net,1433; Database = Tat";
-$username = "ramil";
-$password = "Rosbank1997";
+
 
 try {
-$conn = new PDO($dsn, $username, $password);
+$conn = new PDO("sqlsrv:server = tcp:ramil.database.windows.net,1433; Database = Tat", "ramil", "Rosbank1997");
 $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 if(isset($_POST["clear"])) {
 $sql1 = "DELETE FROM registration_on";
@@ -56,12 +54,10 @@ $conn = null;
 
 <?php
 
-$dsn = "sqlsrv:server = sqlsrv:server = tcp:ramil.database.windows.net,1433; Database = Tat";
-$username = "ramil";
-$password = "Rosbank1997";
+
 
 try {
-$conn = new PDO($dsn, $username, $password);
+$conn = new PDO("sqlsrv:server = tcp:ramil.database.windows.net,1433; Database = Tat", "ramil", "Rosbank1997");
 $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 }
 catch (PDOException $e) {
@@ -108,15 +104,11 @@ $conn = null;
 
 <?php
 
-$dsn = "sqlsrv:server = sqlsrv:server = tcp:ramil.database.windows.net,1433; Database = Tat";
-$username = "ramil";
-$password = "Rosbank1997";
 
 
 try {
-$conn = new PDO($dsn, $username, $password);
+$conn = new PDO("sqlsrv:server = tcp:ramil.database.windows.net,1433; Database = Tat", "ramil", "Rosbank1997");
 $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-}
 catch (PDOException $e) {
 print("Ошибка подключения к SQL Server.");
 die(print_r($e));
