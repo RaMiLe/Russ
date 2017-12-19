@@ -32,8 +32,6 @@ Name <input type="text"
 name="name" id="name"/></br>
 Email <input type="text"
 name="email" id="email"/></br>
-   Country <input type="text"
-name="country" id="country"/></br>
 
 <input type="submit"
 name="submit" value="Submit" />
@@ -41,8 +39,8 @@ name="submit" value="Submit" />
 
 <?php
 try {
-$conn = new PDO("sqlsrv:server = tcp:ramil.database.windows.net,1433; Database = Tat", "ramil", "Rosbank1997");
-   $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+$conn = new PDO("sqlsrv:server = tcp:caramba878.database.windows.net,1433; Database = Caramba878", "Caramba878", "535412danNN");
+$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 }
 catch (PDOException $e) {
 print("Error connecting to SQL Server.");
@@ -53,17 +51,15 @@ try {
 $name = $_POST['name'];
 $email = $_POST['email'];
 $date = date("Y-m-d");
- $country = $_POST['country'];  
-
 
 // Insert data
-
-$sql_insert ="INSERT INTO registration_on (name, email, date, gender, age, country, birthday) VALUES (?,?,?,?,?,?,?)";
+$sql_insert =
+"INSERT INTO registration_too (name, email, date)
+VALUES (?,?,?)";
 $stmt = $conn->prepare($sql_insert);
 $stmt->bindValue(1, $name);
 $stmt->bindValue(2, $email);
 $stmt->bindValue(3, $date);
-    $stmt->bindValue(3, $country);
 
 $stmt->execute();
 }
@@ -81,13 +77,11 @@ echo "<table>";
 echo "<tr><th>Name</th>";
 echo "<th>Email</th>";
 echo "<th>Date</th></tr>";
-    echo "<th>Country</th></tr>";
 
 foreach($registrants as $registrant) {
 echo "<tr><td>".$registrant['name']."</td>";
 echo "<td>".$registrant['email']."</td>";
 echo "<td>".$registrant['date']."</td></tr>";
-    echo "<td>".$registrant['Country']."</td></tr>";
 }
 echo "</table>";
 } else {
