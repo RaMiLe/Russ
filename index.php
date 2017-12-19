@@ -32,6 +32,8 @@ Name <input type="text"
 name="name" id="name"/></br>
 Email <input type="text"
 name="email" id="email"/></br>
+    Email <input type="text"
+name="country" id="country"/></br>
 
 <input type="submit"
 name="submit" value="Submit" />
@@ -51,7 +53,7 @@ try {
 $name = $_POST['name'];
 $email = $_POST['email'];
 $date = date("Y-m-d");
-   
+ $country = $_POST['country'];  
 
 
 // Insert data
@@ -62,6 +64,7 @@ $stmt = $conn->prepare($sql_insert);
 $stmt->bindValue(1, $name);
 $stmt->bindValue(2, $email);
 $stmt->bindValue(3, $date);
+    $stmt->bindValue(3, $country);
 
 $stmt->execute();
 }
@@ -79,11 +82,13 @@ echo "<table>";
 echo "<tr><th>Name</th>";
 echo "<th>Email</th>";
 echo "<th>Date</th></tr>";
+    echo "<th>Country</th></tr>";
 
 foreach($registrants as $registrant) {
 echo "<tr><td>".$registrant['name']."</td>";
 echo "<td>".$registrant['email']."</td>";
 echo "<td>".$registrant['date']."</td></tr>";
+    echo "<td>".$registrant['Country']."</td></tr>";
 }
 echo "</table>";
 } else {
